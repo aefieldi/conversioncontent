@@ -75,6 +75,21 @@ p{margin:0}
 .why{display:flex;flex-wrap:wrap;justify-content:center;gap:8px;max-width:600px}
 .why span{font-size:14px;background:var(--tint);border-radius:999px;padding:6px 14px}
 
+/* make it yours */
+.design{display:grid;grid-template-columns:1fr 1fr;gap:12px;width:100%;max-width:600px}
+.tile{background:var(--surface);border:1.5px solid var(--line);border-radius:18px;padding:18px 16px;display:flex;flex-direction:column;align-items:center;gap:6px}
+.tile b{font:700 11.5px var(--mono);letter-spacing:.12em;color:var(--rec);text-transform:uppercase}
+.tile p{font-size:14.5px}
+.example{width:100%;max-width:560px;background:var(--surface);border:1.5px dashed var(--line);border-radius:20px;overflow:hidden}
+.example header{flex-direction:row;justify-content:center;gap:10px;flex-wrap:wrap;background:var(--tint);padding:12px 16px;font:700 12.5px var(--mono);letter-spacing:.08em}
+.example header span{color:var(--rec)}
+.example .rows{display:flex;flex-direction:column}
+.example .row{padding:14px 18px;display:flex;flex-direction:column;gap:4px;align-items:center}
+.example .row + .row{border-top:1px solid var(--line)}
+.example .row b{font:700 11.5px var(--mono);letter-spacing:.12em;color:var(--plum);text-transform:uppercase}
+.example .n{font-family:var(--display);font-weight:600;font-size:1.02rem}
+.mydesign{width:100%;max-width:420px;text-align:left;font:500 14px/1.7 var(--mono);background:var(--tint);border-radius:14px;padding:14px 18px;margin:0;white-space:pre-wrap;border:0;max-height:none}
+
 /* setup steps */
 .steps{list-style:none;margin:0;padding:0;width:100%;display:flex;flex-direction:column;align-items:center;gap:0;counter-reset:s}
 .step{counter-increment:s;width:100%;max-width:620px;display:flex;flex-direction:column;align-items:center;gap:12px;padding:30px 4px;position:relative;min-width:0}
@@ -110,17 +125,18 @@ pre{margin:0;padding:16px 18px;font:13px/1.6 var(--mono);white-space:pre-wrap;wo
 .foot em{font-family:var(--display);font-style:normal;font-weight:600;color:var(--ink);font-size:1.1rem}
 textarea.hidden-src{position:absolute;left:-9999px;width:1px;height:1px}
 
-@media (max-width:520px){.res{grid-template-columns:1fr}.code{min-width:96px}}
+@media (max-width:520px){.res,.design{grid-template-columns:1fr}.code{min-width:96px}}
 @media (prefers-reduced-motion:reduce){.wave span,.recpill i{animation:none}.wave span{height:var(--h,60%)}}
 </style>
 </head>
 <body>
+
 <div class="wrap">
 
 <header>
   <span class="recpill"><i></i>REC · Conversion Content</span>
   <h1>Talk it out.<br><span class="rec">Film it today.</span></h1>
-  <p class="lede">The fastest way to turn the ideas in your head into content that converts, in your own voice. Built on best practices for standalone short-form, plus YouTube title and thumbnail frameworks, and trained on my library of 486 hooks.</p>
+  <p class="lede">The fastest way to turn the ideas in your head into content that converts, in your own voice and your Human Design. Built on best practices for standalone short-form, plus YouTube title and thumbnail frameworks, and trained on my library of 486 hooks.</p>
   <div class="wave" aria-hidden="true" id="wave"></div>
   <div class="codes" aria-label="Video lengths it picks from">
     <div class="code"><b>00:07</b><small>text on screen + B-roll</small></div>
@@ -147,6 +163,7 @@ textarea.hidden-src{position:absolute;left:-9999px;width:1px;height:1px}
       <div class="row"><b>Re-hook</b><span class="n">runs straight into beat 1, no pause</span></div>
       <div class="row"><b>Beats</b><span class="n">3 beats, 2 to 3 bullets each, in your words</span></div>
       <div class="row"><b>Caption</b><span class="n">keyword rich · easy to scan · up to 5 hashtags</span></div>
+      <div class="row"><b>Design fit</b><span class="n">your pillar · your North Node · where to film</span></div>
     </div>
   </div>
 </section>
@@ -163,6 +180,27 @@ textarea.hidden-src{position:absolute;left:-9999px;width:1px;height:1px}
     <p class="tags">#sagittarius #astrology #humandesign #northnode #risingsign</p>
   </div>
   <div class="why"><span>① your CTA, word for word</span><span>② what's happening now</span><span>③ a question from your story</span><span>④ ✨ the specifics</span><span>⑤ 5 hashtags max, the TikTok limit</span></div>
+</section>
+
+<section>
+  <p class="label">Make it yours</p>
+  <h2>Same brain dump.<br>Your design.</h2>
+  <p class="lede">Add four lines from your chart and every video card tells you which of your pillars it feeds, whether it's your North Node talking, and where to film it.</p>
+  <div class="design">
+    <div class="tile"><b>Aura type</b><h3>How your energy posts</h3><p class="muted">Steady and lit up, the shortcut, the thing that finally clicks, the one drop that shifts everything, or the mirror for the collective.</p></div>
+    <div class="tile"><b>Profile</b><h3>Your two content pillars</h3><p class="muted">The first number is what your mind reaches for. The second shows up anyway, and it's what people respond to first.</p></div>
+    <div class="tile"><b>North Node</b><h3>What you're here to say</h3><p class="muted">The content your growth edge is built for, and the South Node habits that quietly pull you back.</p></div>
+    <div class="tile"><b>Environment</b><h3>Where to film</h3><p class="muted">The kind of place you think clearly in and come across most like yourself.</p></div>
+  </div>
+  <div class="example" aria-label="Worked example">
+    <header>EXAMPLE <span>●</span> PROJECTOR · 4/6 · AQUARIUS NORTH NODE</header>
+    <div class="rows">
+      <div class="row"><b>Pillars</b><span class="n">Conversations + Embodiment: what my people ask, answered by the life I'm living</span></div>
+      <div class="row"><b>North Node</b><span class="n">tool demos and system breakdowns, not main-character content</span></div>
+      <div class="row"><b>Aura</b><span class="n">the video that makes something finally click</span></div>
+    </div>
+  </div>
+  <p class="muted" style="font-size:15px;max-width:52ch">Design tells you how to make it, never whether to. It never replaces a hook, never rewrites your words, and never skips the call to action.</p>
 </section>
 
 <section>
@@ -183,10 +221,20 @@ textarea.hidden-src{position:absolute;left:-9999px;width:1px;height:1px}
     </li>
 
     <li class="step">
+      <h3>Add the Design Map to its knowledge</h3>
+      <p class="muted">Same again: <b>+ → Add text content</b>, title it Design Map, paste. Every aura type, profile, North Node and environment, and what each one means for your content.</p>
+      <button class="copy hot" data-src="design">Copy the Design Map</button>
+      <div class="chips" style="padding:12px 14px 0"><span>Aura types</span><span>12 profiles</span><span>12 North Nodes</span><span>Environments</span></div>
+      <details><summary>THE DESIGN MAP · AURA, PROFILE, NORTH NODE, ENVIRONMENT</summary><pre id="design-preview"></pre></details>
+    </li>
+
+    <li class="step">
       <h3>Paste the instructions</h3>
       <p class="muted"><b>Set project instructions</b>, paste, save. The whole workflow lives here, so you never paste a prompt again.</p>
       <button class="copy" data-src="instr">Copy the instructions</button>
       <details><summary>READ THE INSTRUCTIONS</summary><pre id="instr">You are my Conversion Content coach. The "Hook Library" in this project's knowledge holds every hook I use, sorted by job: title hooks (text on screen), verbal hooks in six groups (the first sentence I say), mid-sentence re-hooks, and YouTube title frameworks.
+
+The "Design Map" in this project's knowledge explains my aura type, profile, North Node and environment. My own design is in the MY DESIGN block at the top of these instructions. If a line is blank, skip that part. Never guess my design from my transcript.
 
 When I paste a transcript or a brain dump, I won't send a prompt. Do all of this every time.
 
@@ -195,6 +243,7 @@ Read the transcript and pull out every point that could stand on its own as a sh
 - 7 seconds: one line of text on screen over B-roll. For one punchy truth.
 - 15 seconds: one point, said once, with one example.
 - 30 to 60 seconds: a point with steps, a story, or a before and after.
+Favor the points that feed my two profile pillars and my North Node. If a point is pure South Node content, still list it, and say in one line how to tilt it toward my North Node.
 Open with one line: "This is one video" or "You have [number] videos in here", then go.
 If I say "make this one video", skip this step and turn the whole transcript into one video.
 
@@ -211,6 +260,7 @@ STEP 2. For each video, give me:
 - Then the specifics as short bullets, each starting with the same emoji (✨ unless another fits better). Nouns, not sentences.
 - Last line: no more than 5 hashtags, the words people search for this topic.
 It does not recap the whole video. Simple words, the keywords from my transcript, nothing I didn't say.
+7. Design fit, 3 short lines: the pillar it feeds (my conscious or unconscious one), whether it's North Node or South Node content and why in 5 words, and where to film it from my environment. Skip any line my design block leaves blank.
 
 Example caption:
 Comment EXPAND and I'll send you the tool to get your forecast, plus a video walkthrough on exactly what to expect this season.
@@ -226,7 +276,7 @@ Were you having a meltdown a month ago, and now opportunities are coming out of 
 #sagittarius #astrology #humandesign #northnode #risingsign
 
 STEP 3. Rank them
-If there's more than one video, rank them in the order I should film them, with one line on why for each. Never use the same hook twice across the set.
+If there's more than one video, rank them in the order I should film them, with one line on why for each. When two videos are close, rank the one that fits my design higher. Never use the same hook twice across the set.
 
 STEP 4. YouTube, only if it fits
 If the transcript has enough for a long-form video (several connected points, a full how-to, or a story with a lesson), add a YouTube section:
@@ -244,7 +294,20 @@ Rules every time:
 - Don't tell me which list a hook came from. Just give me the hook.
 - Don't invent results, numbers, clients or stories I didn't say. Keep my phrasing. If a line sounds like a coach wrote it, use mine instead.
 - Bullets I can glance at while filming, not a script.
+- Design tells me HOW, never WHETHER. It never replaces a hook from the Hook Library, never changes my words, and is never a reason to skip filming or skip the call to action.
 - "Give me 3 more" means 3 new options for whatever I name, none repeated.</pre></details>
+    </li>
+
+    <li class="step">
+      <h3>Add your design</h3>
+      <p class="muted">Pull your free charts at <a href="https://astro-seek.com" target="_blank" rel="noopener" style="color:var(--plum)">astro-seek.com</a> (Human Design and your birth chart). Fill in the four lines and paste them at the very top of your project instructions.</p>
+      <pre class="mydesign" id="mydesign">MY DESIGN
+Aura type: [Generator / Manifesting Generator / Projector / Manifestor / Reflector]
+Profile: [e.g. 4/6]
+North Node: [sign]
+Environment: [Caves / Markets / Kitchens / Mountains / Valleys / Shores, or "don't know"]</pre>
+      <button class="copy" data-src="mydesign">Copy the four lines</button>
+      <p class="muted" style="font-size:15px">Don't know one? Leave it blank. Claude skips it and never guesses.</p>
     </li>
 
     <li class="step">
@@ -877,6 +940,169 @@ Built for long-form titles, and the same frameworks work for a reel title, a car
 - I went to all [X]. Here are my rankings.
 - From [screw-up] to [legend]: [the turning point]
 </textarea>
+<textarea class="hidden-src" id="design" readonly aria-hidden="true" tabindex="-1">THE DESIGN MAP
+
+How to use this: the member&#x27;s own design is in the MY DESIGN block at the top of the project instructions. Look up each line here. Design tells you HOW to make the content, never WHETHER to make it. It never changes a hook, never changes their words, and never replaces the call to action. If a line in MY DESIGN is blank, skip that part. Never guess a design from a transcript.
+
+The combination is the read, not the lookup. A Projector 4/6 with an Aquarius North Node is one person, not three facts.
+
+====================================================
+1. AURA TYPE: how your energy posts
+====================================================
+
+GENERATOR (the Slow Burn). Aura: open and enveloping.
+- Posting energy: consistent and lit up. Your steady rhythm is the heartbeat everyone else posts to.
+- Your content works when: you&#x27;re filming the thing that genuinely lights you up. The more aligned the topic, the more magnetic you are on camera.
+- Give people something to respond to: questions, polls, &quot;which one are you?&quot; posts.
+- Warning sign: frustration. Content from your head instead of your gut reads flat.
+- Watch for: second-guessing your value, giving the whole thing away for free.
+
+MANIFESTING GENERATOR (the Wild Card). Aura: open and enveloping, with speed.
+- Posting energy: breaks every &quot;pick one niche&quot; rule and keeps the algorithm from getting comfortable.
+- Your content works when: you teach the shortcut. Skip the steps nobody needs.
+- Multiple topics, platforms and offers are correct for you, not a focus problem.
+- Warning sign: frustration, or anger at your own pace.
+
+PROJECTOR (the Systems Nerd). Aura: focused and absorbing.
+- Posting energy: the content that makes something finally click, the thing someone has been circling for years.
+- Your content works when: you name the bottleneck nobody else can see. One fully built framework or series beats ten scattered tips.
+- Warning sign: bitterness. Posting a diagnosis at people who didn&#x27;t ask, then checking the views.
+- Not built to hustle. Fewer, sharper videos. Rest is part of the insight.
+- Success looks like: recognition. The comment &quot;how did you know?&quot; is the green flag, not the view count.
+
+MANIFESTOR (the Ripple Effect). Aura: closed and repelling.
+- Posting energy: drops something once, shifts the conversation, disappears, and has more followers every time they come back.
+- Your content works when: you inform. Announce, declare, start the conversation. Don&#x27;t ask permission.
+- Warning sign: anger. Starting ten series and finishing none.
+- Batch it and let the system post it, so the follow-through isn&#x27;t on you.
+
+REFLECTOR (the Social Anchor). Aura: sampling and resistant.
+- Posting energy: reflects the collective back to itself. The content the community needed and didn&#x27;t know how to ask for.
+- Your content works when: you name what everyone is missing right now. Lives suit you.
+- Warning sign: disappointment.
+- Big content decisions (a new series, a new direction) get a full 28-day cycle.
+
+====================================================
+2. PROFILE: your two content pillars
+====================================================
+
+Your profile is two numbers. The first is conscious: the pillar your mind reaches for. The second is unconscious: the one that shows up whether you plan it or not, and the one people respond to first. Feed both. A profile that only publishes its first pillar reads flat.
+
+THE SIX PILLARS (one per line)
+- Line 1, Investigator → RECEIPTS. &quot;Here&#x27;s how this actually works, and here&#x27;s the proof.&quot; Teardowns, research, the mechanism behind the result. Depth beats frequency. Show the research, don&#x27;t hide it.
+- Line 2, Hermit → INSTINCTS. The thing you do without thinking that other people can&#x27;t do at all, named out loud. Film yourself doing it, not explaining it. Batch, then disappear.
+- Line 3, Martyr → EXPERIMENTS. &quot;I tried this. It broke. Here&#x27;s what I&#x27;d do next time.&quot; The failure post beats the success post. Your mistakes are your credential.
+- Line 4, Opportunist → CONVERSATIONS. What your people are asking, what came out of the DMs and the calls. Talk to people, not at them. Comment-to-DM calls to action fit this line best.
+- Line 5, Heretic → MAGNETISM. The spicy take. Where the status quo fails and what works instead. Say the thing everyone is thinking. Be specific about what you do and don&#x27;t do.
+- Line 6, Role Model → EMBODIMENT. The life itself as the proof. &quot;Here&#x27;s what 20 years taught me.&quot; Film yourself being, not selling. Long arc, personal story.
+
+THE TWELVE PROFILES (conscious pillar + unconscious pillar, and the shape of the content)
+- 1/3 Investigative Martyr: Receipts + Experiments. Research it, test it, teach what failed. Sell the shortcut, backed by real depth.
+- 1/4 Investigative Opportunist: Receipts + Conversations. The go-to expert inside one community. Answer your people&#x27;s questions with proof.
+- 2/4 Hermit Opportunist: Instincts + Conversations. Batch content alone, sell through relationships. Never cold.
+- 2/5 Hermit Heretic: Instincts + Magnetism. Show the natural gift, then take the stand. Choose which projections to take on.
+- 3/5 Martyr Heretic: Experiments + Magnetism. The natural teacher of what not to do. &quot;I broke it so you don&#x27;t have to.&quot;
+- 3/6 Martyr Role Model: Experiments + Embodiment. Early on, experiment loudly. Later, mentor from the scar tissue.
+- 4/1 Opportunist Investigator: Conversations + Receipts. Deep expertise for a known circle. Their questions, your proof.
+- 4/6 Opportunist Role Model: Conversations + Embodiment. What your people are asking, answered by the life you&#x27;re living. The community builder who becomes the mentor.
+- 5/1 Heretic Investigator: Magnetism + Receipts. Contrarian takes with receipts attached.
+- 5/2 Heretic Hermit: Magnetism + Instincts. Take the stand, then genuinely disappear. Quality over volume.
+- 6/2 Role Model Hermit: Embodiment + Instincts. Lead by example, retreat to recharge. Can&#x27;t be always-on, shouldn&#x27;t try.
+- 6/3 Role Model Martyr: Embodiment + Experiments. Experiment in public, then mentor from it. The mistakes are the curriculum.
+
+====================================================
+3. NORTH NODE: what you&#x27;re here to say
+====================================================
+
+The South Node is past-life comfort: what you default to when things get hard. It gave you real gifts and you still get to use them. The North Node is your growth edge. The more your content leans into your North Node, the more it works. Each entry: what you&#x27;re here to do, the content that fits, the content that pulls you back.
+
+ARIES North Node (from Libra), the Bold Visionary Leader
+- Here to: be the face of your brand and lead with conviction. Stop polling, start declaring.
+- Tone: direct, confident, bold, slightly disruptive.
+- Content that fits: solo videos, keynote-style talks, bold opinions, stories of decisive moments.
+- Pulls you back: polls asking what people want, both-sides posts, content that never takes a stand.
+
+TAURUS North Node (from Scorpio), the Grounded Builder
+- Here to: build beautiful, sustainable, scalable things. Success from consistency, not chaos.
+- Tone: calm, reassuring, practical, earthy.
+- Content that fits: frameworks, step-by-step systems, case studies, how-I-built-this stories.
+- Pulls you back: crisis stories, shadow spirals, breakdown-to-breakthrough posts that exhaust people.
+
+GEMINI North Node (from Sagittarius), the Connector and Communicator
+- Here to: learn through conversation, not lectures. Your community teaches you as much as you teach them.
+- Tone: light, curious, friendly, conversational.
+- Content that fits: interviews, Q&amp;As, polls, threads, short videos that start conversations.
+- Pulls you back: hour-long lectures, grand theories, monologues with the comments turned off in spirit.
+
+CANCER North Node (from Capricorn), the Heart-Led Mama Bear
+- Here to: lead with heart, not just strategy. People need to feel seen, not just served.
+- Tone: warm, empathetic, protective, supportive.
+- Content that fits: heartfelt stories, honest check-ins, how-are-you-really posts, support threads.
+- Pulls you back: achievement metrics, hustle frameworks, polished case studies with no humans in them.
+
+LEO North Node (from Aquarius), the Heart-Centered Star
+- Here to: step into the spotlight. Your presence is part of the product.
+- Tone: confident, warm, joyful, expressive.
+- Content that fits: solo reels, behind the scenes, personal stories, performance-style teaching.
+- Pulls you back: faceless value posts, system diagrams, zero personal story.
+
+VIRGO North Node (from Pisces), the Practical Servant
+- Here to: serve from strength, not sacrifice. Turn dreams into systems that work. Aim for excellence, not perfection.
+- Tone: clear, precise, helpful, kind but no-nonsense.
+- Content that fits: step-by-step guides, templates, checklists, tested case studies.
+- Pulls you back: vague inspiration, channeled downloads with no next step, endless free emotional labor.
+
+LIBRA North Node (from Aries), the Collaborative Architect
+- Here to: create win-win situations. You get further through partnership than going solo.
+- Tone: diplomatic, elegant, inviting, balanced.
+- Content that fits: joint interviews, collabs, co-created content, partner spotlights.
+- Pulls you back: hot takes fired off in ten seconds, solo announcements, zero collaborations.
+- Watch for: overthinking. Film it anyway.
+
+SCORPIO North Node (from Taurus), the Deep Transformer
+- Here to: facilitate deep change, not surface fixes. Your business won&#x27;t look like anyone else&#x27;s.
+- Tone: intense, honest, direct, powerful.
+- Content that fits: deep interviews, transformation stories, shadow work, unfiltered truth.
+- Pulls you back: comfort-zone tips, pleasant routines, content that soothes but never shifts anyone.
+
+SAGITTARIUS North Node (from Gemini), the Wise Adventurer
+- Here to: teach what you&#x27;ve lived, not just learned. The richer your life, the better your business.
+- Tone: optimistic, bold, enthusiastic, story-driven.
+- Content that fits: life experiments, travel stories, what-this-taught-me posts, documented journeys.
+- Pulls you back: curated link dumps, trivia, summaries of other people&#x27;s ideas.
+
+CAPRICORN North Node (from Cancer), the Legacy Builder
+- Here to: build something that lasts, and step into the authority you&#x27;ve been avoiding.
+- Tone: serious, confident, professional, authoritative.
+- Content that fits: case studies, frameworks, leadership takes, legacy stories.
+- Pulls you back: emotional check-ins for everyone, replying to every DM at midnight.
+
+AQUARIUS North Node (from Leo), the Collective Innovator
+- Here to: move from &quot;look at me&quot; to &quot;look at this idea&quot;. Build movements and systems, not just programs.
+- Tone: forward-thinking, innovative, community-focused.
+- Content that fits: tool demos, system breakdowns, community challenges, AI tutorials. Build it for yourself, show it working, then share it.
+- Pulls you back: endless selfie videos, main-character everything.
+
+PISCES North Node (from Virgo), the Flowing Intuitive
+- Here to: trust intuition over strategy and move with divine timing.
+- Tone: soft, spiritual, gentle, open.
+- Content that fits: intuitive reflections, what-showed-up-for-me posts, flow stories. Post it before it&#x27;s perfect.
+- Pulls you back: over-edited posts published rarely, a drafts folder of 200 unposted ideas.
+
+====================================================
+4. ENVIRONMENT: where to film
+====================================================
+
+Your environment is the kind of place where you think clearly and come across most like yourself. Use it to pick where you film. Lighting, clean audio and the same backdrop every time still matter more than any of this.
+
+- CAVES: small, protected, enclosed. Film in a cozy room or corner with your back to a wall, a tight frame, one or two people around at most.
+- MARKETS: variety, movement, exchange. Film out and about: cafés, walking, busy places, a change of backdrop.
+- KITCHENS: where things get made and changed. Film at the counter or the kitchen table, hands busy, mid-task.
+- MOUNTAINS: height and the overview. Film from a high spot: a balcony, a view, standing, looking out.
+- VALLEYS: in between, sheltered but connected. Film by a window, in a garden, somewhere calm with life going on around you.
+- SHORES: edges and thresholds. Film near water, in a doorway or at the edge of a space.
+
+If they don&#x27;t know their environment: give one simple tip (good light, clean audio, same backdrop) and move on.</textarea>
 
 <script>
 (function(){
@@ -884,9 +1110,10 @@ Built for long-form titles, and the same frameworks work for a reel title, a car
   hs.forEach(function(h,i){var s=document.createElement('span');s.style.setProperty('--h',h+'%');s.style.animationDelay=(-i*0.13)+'s';w.appendChild(s);});
   var lib=document.getElementById('lib');
   document.getElementById('lib-preview').textContent=lib.value;
+  document.getElementById('design-preview').textContent=document.getElementById('design').value;
   function text(id){var el=document.getElementById(id);return el.tagName==='TEXTAREA'?el.value:el.textContent;}
   function fallback(id){
-    var el=document.getElementById(id==='lib'?'lib-preview':id); var d=el.closest('details'); if(d) d.open=true;
+    var el=document.getElementById(id==='lib'?'lib-preview':id==='design'?'design-preview':id); var d=el.closest('details'); if(d) d.open=true;
     var r=document.createRange();r.selectNodeContents(el);var s=getSelection();s.removeAllRanges();s.addRange(r);
   }
   document.querySelectorAll('button.copy').forEach(function(b){
