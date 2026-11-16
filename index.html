@@ -69,14 +69,15 @@ p{margin:0}
 
 /* caption */
 .caption{width:100%;max-width:520px;background:var(--surface);border:1.5px solid var(--line);border-radius:20px;padding:22px 20px;display:flex;flex-direction:column;gap:14px;align-items:center;font-size:15.5px}
-.caption .first{font-weight:700;background:linear-gradient(transparent 58%,color-mix(in srgb,var(--sun) 40%,transparent) 58%);padding:0 2px}
+.caption .first{font-weight:700}
+.caption .first mark{color:inherit;background:linear-gradient(transparent 60%,color-mix(in srgb,var(--sun) 38%,transparent) 60%);padding:0 2px;-webkit-box-decoration-break:clone;box-decoration-break:clone}
 .caption .tags{color:var(--plum);font:500 13.5px var(--mono)}
 .caption ul{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:2px}
 .why{display:flex;flex-wrap:wrap;justify-content:center;gap:8px;max-width:600px}
 .why span{font-size:14px;background:var(--tint);border-radius:999px;padding:6px 14px}
 
 /* make it yours */
-.design{display:grid;grid-template-columns:1fr 1fr;gap:12px;width:100%;max-width:600px}
+.design{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;width:100%;max-width:700px}
 .tile{background:var(--surface);border:1.5px solid var(--line);border-radius:18px;padding:18px 16px;display:flex;flex-direction:column;align-items:center;gap:6px}
 .tile b{font:700 11.5px var(--mono);letter-spacing:.12em;color:var(--rec);text-transform:uppercase}
 .tile p{font-size:14.5px}
@@ -163,7 +164,7 @@ textarea.hidden-src{position:absolute;left:-9999px;width:1px;height:1px}
       <div class="row"><b>Re-hook</b><span class="n">runs straight into beat 1, no pause</span></div>
       <div class="row"><b>Beats</b><span class="n">3 beats, 2 to 3 bullets each, in your words</span></div>
       <div class="row"><b>Caption</b><span class="n">keyword rich · easy to scan · up to 5 hashtags</span></div>
-      <div class="row"><b>Design fit</b><span class="n">your pillar · your North Node · where to film</span></div>
+      <div class="row"><b>Design fit</b><span class="n">your pillar · your North Node · your energy</span></div>
     </div>
   </div>
 </section>
@@ -173,7 +174,7 @@ textarea.hidden-src{position:absolute;left:-9999px;width:1px;height:1px}
   <h2>The first line matches what you said.</h2>
   <p class="lede">Say "comment AUDIT" or "comment FORECAST" in your video and the caption opens with that exact line. Then it stays short, easy to read, and full of the words people search.</p>
   <div class="caption" aria-label="Example caption">
-    <p class="first">Comment EXPAND and I'll send you the tool to get your forecast, plus a video walkthrough on exactly what to expect this season.</p>
+    <p class="first"><mark>Comment EXPAND and I'll send you the tool to get your forecast, plus a video walkthrough on exactly what to expect this season.</mark></p>
     <p>Retrograde season is officially over and Sagittarius season is here ♐️</p>
     <p>Were you having a meltdown a month ago, and now opportunities are coming out of the woodwork? Your personalized cosmic weather forecast tells you exactly what you're ready to expand into this Sagittarius season, based on your:</p>
     <ul><li>✨ Rising sign</li><li>✨ North node</li><li>✨ Human Design aura type</li><li>✨ Human Design profile</li></ul>
@@ -185,12 +186,11 @@ textarea.hidden-src{position:absolute;left:-9999px;width:1px;height:1px}
 <section>
   <p class="label">Make it yours</p>
   <h2>Same brain dump.<br>Your design.</h2>
-  <p class="lede">Add four lines from your chart and every video card tells you which of your pillars it feeds, whether it's your North Node talking, and where to film it.</p>
+  <p class="lede">Add three lines from your chart and every video card tells you which of your pillars it feeds, whether it's your North Node talking, and how your energy wants to post it.</p>
   <div class="design">
     <div class="tile"><b>Aura type</b><h3>How your energy posts</h3><p class="muted">Steady and lit up, the shortcut, the thing that finally clicks, the one drop that shifts everything, or the mirror for the collective.</p></div>
     <div class="tile"><b>Profile</b><h3>Your two content pillars</h3><p class="muted">The first number is what your mind reaches for. The second shows up anyway, and it's what people respond to first.</p></div>
     <div class="tile"><b>North Node</b><h3>What you're here to say</h3><p class="muted">The content your growth edge is built for, and the South Node habits that quietly pull you back.</p></div>
-    <div class="tile"><b>Environment</b><h3>Where to film</h3><p class="muted">The kind of place you think clearly in and come across most like yourself.</p></div>
   </div>
   <div class="example" aria-label="Worked example">
     <header>EXAMPLE <span>●</span> PROJECTOR · 4/6 · AQUARIUS NORTH NODE</header>
@@ -222,10 +222,10 @@ textarea.hidden-src{position:absolute;left:-9999px;width:1px;height:1px}
 
     <li class="step">
       <h3>Add the Design Map to its knowledge</h3>
-      <p class="muted">Same again: <b>+ → Add text content</b>, title it Design Map, paste. Every aura type, profile, North Node and environment, and what each one means for your content.</p>
+      <p class="muted">Same again: <b>+ → Add text content</b>, title it Design Map, paste. Every aura type, profile and North Node, and what each one means for your content.</p>
       <button class="copy hot" data-src="design">Copy the Design Map</button>
-      <div class="chips" style="padding:12px 14px 0"><span>Aura types</span><span>12 profiles</span><span>12 North Nodes</span><span>Environments</span></div>
-      <details><summary>THE DESIGN MAP · AURA, PROFILE, NORTH NODE, ENVIRONMENT</summary><pre id="design-preview"></pre></details>
+      <div class="chips" style="padding:12px 14px 0"><span>Aura types</span><span>12 profiles</span><span>12 North Nodes</span></div>
+      <details><summary>THE DESIGN MAP · AURA TYPE, PROFILE, NORTH NODE</summary><pre id="design-preview"></pre></details>
     </li>
 
     <li class="step">
@@ -234,7 +234,7 @@ textarea.hidden-src{position:absolute;left:-9999px;width:1px;height:1px}
       <button class="copy" data-src="instr">Copy the instructions</button>
       <details><summary>READ THE INSTRUCTIONS</summary><pre id="instr">You are my Conversion Content coach. The "Hook Library" in this project's knowledge holds every hook I use, sorted by job: title hooks (text on screen), verbal hooks in six groups (the first sentence I say), mid-sentence re-hooks, and YouTube title frameworks.
 
-The "Design Map" in this project's knowledge explains my aura type, profile, North Node and environment. My own design is in the MY DESIGN block at the top of these instructions. If a line is blank, skip that part. Never guess my design from my transcript.
+The "Design Map" in this project's knowledge explains my aura type, profile and North Node. My own design is in the MY DESIGN block at the top of these instructions. If a line is blank, skip that part. Never guess my design from my transcript.
 
 When I paste a transcript or a brain dump, I won't send a prompt. Do all of this every time.
 
@@ -260,7 +260,7 @@ STEP 2. For each video, give me:
 - Then the specifics as short bullets, each starting with the same emoji (✨ unless another fits better). Nouns, not sentences.
 - Last line: no more than 5 hashtags, the words people search for this topic.
 It does not recap the whole video. Simple words, the keywords from my transcript, nothing I didn't say.
-7. Design fit, 3 short lines: the pillar it feeds (my conscious or unconscious one), whether it's North Node or South Node content and why in 5 words, and where to film it from my environment. Skip any line my design block leaves blank.
+7. Design fit, 3 short lines: the pillar it feeds (my conscious or unconscious one), whether it's North Node or South Node content and why in 5 words, and one line on how to post it so it fits my aura type. Skip any line my design block leaves blank.
 
 Example caption:
 Comment EXPAND and I'll send you the tool to get your forecast, plus a video walkthrough on exactly what to expect this season.
@@ -300,13 +300,12 @@ Rules every time:
 
     <li class="step">
       <h3>Add your design</h3>
-      <p class="muted">Pull your free charts at <a href="https://astro-seek.com" target="_blank" rel="noopener" style="color:var(--plum)">astro-seek.com</a> (Human Design and your birth chart). Fill in the four lines and paste them at the very top of your project instructions.</p>
+      <p class="muted">Pull your free charts at <a href="https://astro-seek.com" target="_blank" rel="noopener" style="color:var(--plum)">astro-seek.com</a> (Human Design and your birth chart). Fill in the three lines and paste them at the very top of your project instructions.</p>
       <pre class="mydesign" id="mydesign">MY DESIGN
 Aura type: [Generator / Manifesting Generator / Projector / Manifestor / Reflector]
 Profile: [e.g. 4/6]
-North Node: [sign]
-Environment: [Caves / Markets / Kitchens / Mountains / Valleys / Shores, or "don't know"]</pre>
-      <button class="copy" data-src="mydesign">Copy the four lines</button>
+North Node: [sign]</pre>
+      <button class="copy" data-src="mydesign">Copy the three lines</button>
       <p class="muted" style="font-size:15px">Don't know one? Leave it blank. Claude skips it and never guesses.</p>
     </li>
 
@@ -1088,21 +1087,7 @@ PISCES North Node (from Virgo), the Flowing Intuitive
 - Tone: soft, spiritual, gentle, open.
 - Content that fits: intuitive reflections, what-showed-up-for-me posts, flow stories. Post it before it&#x27;s perfect.
 - Pulls you back: over-edited posts published rarely, a drafts folder of 200 unposted ideas.
-
-====================================================
-4. ENVIRONMENT: where to film
-====================================================
-
-Your environment is the kind of place where you think clearly and come across most like yourself. Use it to pick where you film. Lighting, clean audio and the same backdrop every time still matter more than any of this.
-
-- CAVES: small, protected, enclosed. Film in a cozy room or corner with your back to a wall, a tight frame, one or two people around at most.
-- MARKETS: variety, movement, exchange. Film out and about: cafés, walking, busy places, a change of backdrop.
-- KITCHENS: where things get made and changed. Film at the counter or the kitchen table, hands busy, mid-task.
-- MOUNTAINS: height and the overview. Film from a high spot: a balcony, a view, standing, looking out.
-- VALLEYS: in between, sheltered but connected. Film by a window, in a garden, somewhere calm with life going on around you.
-- SHORES: edges and thresholds. Film near water, in a doorway or at the edge of a space.
-
-If they don&#x27;t know their environment: give one simple tip (good light, clean audio, same backdrop) and move on.</textarea>
+</textarea>
 
 <script>
 (function(){
